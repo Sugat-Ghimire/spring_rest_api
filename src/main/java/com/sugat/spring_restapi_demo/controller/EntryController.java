@@ -31,4 +31,8 @@ public class EntryController {
         entries.remove(myId);
         return true;
     }
+    @PutMapping("id/{myId}")
+    public AppEntry updateEntry(@PathVariable Long myId, @RequestBody AppEntry newEntry){
+        return entries.put(myId,newEntry);
+    }
 }
