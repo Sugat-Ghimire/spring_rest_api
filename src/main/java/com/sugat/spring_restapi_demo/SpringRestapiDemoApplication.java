@@ -10,7 +10,4 @@ public class SpringRestapiDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringRestapiDemoApplication.class, args);
 	}
-
-
-
 }

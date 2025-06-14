@@ -22,5 +22,13 @@ public class EntryController {
         entries.put(entry.getId(),entry);
         return true;
     }
-
+    @GetMapping("id/{myId}")
+    public AppEntry getEntriesById(@PathVariable Long myId){
+        return entries.get(myId);
+    }
+    @DeleteMapping("id/{myId}")
+    public boolean deleteEntriesById(@PathVariable Long myId){
+        entries.remove(myId);
+        return true;
+    }
 }
